@@ -1,33 +1,310 @@
-.homepage #catAbb,
-.homepage #go,
-.homepage .leftlinks #cl_app_beta,
-.no-js,
-p.more {
-  display: none;
+/* Universal selector */
+* {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #F5F5F5;
+  color: #464646;
+}
+/* Tag selector */
+ul {
+  padding: 0;
+}
+/* Child combinator selector */
+ul > li {
+  list-style: none;
+}
+/* Tag selector */
+a {
+  text-decoration: none;
+}
+/* Pseudo-classes for hover and visited states */
+a:hover,
+a:visited,
+a:hover > span,
+a:visited > span {
+  color: #800080;
+}
+a:hover,
+a:hover > span {
+  font-weight: 700;
+}
+/* Class selector */
+.page-container {
+  width: 1200px;
 }
 
-#logo {
-  font-size: 2.5rem;
+/* Style the main three sections by ID */
+#leftbar,
+#center,
+#rightbar {
+  float: left;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
-.homepage-search .querybox {
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-bottom: 2px solid #464646;
-  font-size: 16px;
+/* Clear the footer */
+footer {
+  clear: both;
 }
 
-.menu.collapsible > li {
-  cursor: pointer;
+#leftbar,
+#rightbar {
+  width: 25%;
 }
 
-.menu.collapsible > li.expand.s ul {
-  display: block;
+#center {
+  width: 50%;
+  border: 1px solid #464646;
+  border-radius: 10px;
 }
 
-.menu.collapsible > li ul {
-  display: none;
+/* Style DIVs that are direct children of the #center element */
+#center > div {
+  float: left;
+  width: 33%;
 }
 
-/* Your code here */
+/* Style H2 that is a descendant of element with the ID "topban" */
+#topban h2 {
+  text-align: center;
+}
+
+ul.clfooter {
+  text-align: center;
+  border-top: 1px solid gray;
+  padding: 10px 0;
+}
+
+/* Style LIs that are direct children of the UL with the "clfooter" class */
+ul.clfooter > li {
+  display: inline;
+  padding-right: 5px;
+}
+
+/* Create a pseudo-element before every H4 with the "ban" class */
+h4.ban::before {
+  content: "☮️";
+}
+
+/* More pseudo-selectors */
+input:focus {
+  background-color: lightyellow;
+}
+
+h4.ban:first-child {
+  font-size: 1.2rem;
+}
+
+.menu.collapsible .acitem:last-child {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #464646;
+}
+
+/* CSS from wireframes part 1:  */
+html,
+body {
+font-family: Georgia, Cambria, "Times New Roman";
+box-sizing: border-box;
+margin: 0;
+}
+.header {
+margin: 0 auto;
+width: 80%;
+}
+.nav__upper {
+padding: 20px;
+position: relative;
+border-bottom: black solid 2px;
+width: 100%;
+}
+.upper__left {
+height: 32px;
+width: 32px;
+}
+.upper__right {
+display: inline-block;
+vertical-align: middle;
+position: absolute;
+right: 0;
+}
+.sign-in,
+.get-started {
+display: inline-block;
+width: fit-content;
+margin: 0 auto;
+padding: 12px;
+}
+.sign-in {
+padding: 7px 16px 9px;
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+color: #416440;
+text-decoration: none;
+}
+.get-started {
+color: #1a8917;
+font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+padding: 7px 16px 9px;
+border: 1px solid #1a8917;
+box-sizing: border-box;
+border-radius: 4px;
+text-decoration: none;
+}
+.nav__lower {
+text-align: center;
+margin: 0 auto;
+border-bottom: solid 2px black;
+width: 105%;
+}
+.get-started:hover {
+background-color: #1a8917;
+color: white;
+}
+.nav__lower a {
+display: inline-block;
+margin: 0 16px;
+padding: 7px;
+text-decoration: none;
+font-weight: 500;
+color: #757575;
+font-size: 16px;
+}
+.content {
+width: 35%;
+padding: 1em;
+margin: 0 auto;
+position: relative;
+}
+/* CSS from wireframes part 2:  */
+.main__img {
+width: 100%;
+}
+h1 {
+box-sizing: border-box;
+display: block;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: 60px;
+overflow-wrap: break-word;
+}
+p {
+font-size: 21px;
+font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+margin: 42px 0px -9.66px;
+}
+h2 {
+font-size: 30px;
+margin: 58.5px 0px -8.4px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.external_links {
+padding: 1em;
+}
+ul {
+font-size: 18px;
+display: inline-block;
+}
+li a {
+color: blue;
+font-size: 18px;
+}
+.external_img {
+height: 15px;
+width: 15px;
+}
+.grid {
+margin: 0 auto;
+padding: 1em;
+width: 60%;
+}
+.grid a {
+text-decoration: none;
+color: #272727;
+font-weight: 600;
+display: inline-block;
+max-width: 48%;
+padding-bottom: 25px;
+}
+.grid a:nth-child(odd) {
+float: left;
+}
+.grid a:nth-child(even) {
+float: right;
+}
+.footer {
+position: relative;
+margin: 0 auto;
+padding: 0.5em;
+clear: both;
+}
+.footer__left {
+position: absolute;
+height: 32px;
+width: 32px;
+}
+.footer__right a {
+right: 5px;
+text-decoration: none;
+font-size: 16px;
+padding: 1em;
+color: #272727;
+}
+.footer__right {
+position: absolute;
+right: 0%;
+}
+
+
+/*!!START */
+@media screen and (min-width: 851px) and (max-width: 1219px) {
+  .content {
+      flex-direction: row;
+  }
+}
+/*!!END */
+
+/* ----- Phase 1 - Wide Screen ----- */
+
+/*!!START */
+@media screen and (min-width: 1220px) {
+  .page {
+      flex-direction: row;
+  }
+  .content {
+      flex-direction: row;
+  }
+}
+/*!!END */
+
+/* ===== PRINTING ===== */
+
+/* Phase 2 */
+
+/*!!START */
+@media print {
+  header, .sidebar, .image-box {
+      display: none;
+      visibility: hidden;
+  }
+
+  .story-box {
+      background-color: white;
+      padding: 0;
+      filter: none;
+  }
+
+  .page, .content {
+      padding: 0;
+  }
+
+  /* Bonus Phase - and remove .image-box from first line under @media print */
+  .image-box {
+      width: 85px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      float: right;
+  }
+}
